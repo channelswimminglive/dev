@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Vessel Tracker - Dover Strait</title>
+    <style>
+        body {
+            margin: -24px auto;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            width: 640px;
+            height: 880px;
+            background-color: #f5f5f5;
+        }
+        .map-container {
+            width: 640px;
+            height: 920px;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        div.flpanel {
+            display: none !important;
+        }
+        #ship-info-popup {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="map-container">
+        <script type="text/javascript">
+            // Map appearance
+            var width="640px";         // width in pixels or percentage
+            var height="1100px";       // height in pixels (set to match page height)
+            var latitude="51.0";      // center latitude (decimal degrees)
+            var longitude="1.1";      // center longitude (decimal degrees)
+            var zoom="11";            // initial zoom (updated to 10)
+            var names=false;          // always show ship names (defaults to false)
+            // Single ship tracking
+            var mmsi="232018618";     // display latest position (MMSI)
+            var show_track=true;      // display track line (last 24 hours)
+            var show_info=0;         // disables showing vessel info on load
+        </script>
+        <script type="text/javascript" src="https://www.vesselfinder.com/aismap.js"></script>
+    </div>
+</body>
+</html>
